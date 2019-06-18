@@ -1278,6 +1278,7 @@ public final class SymbolicState extends State {
 			// Check the number of elements in the input map
 			int length = input.getSize();
 			log.info("Length of input: " + length);
+			log.info("Content of input: " + input.getNames());
 
 
 			if (length == 0) {

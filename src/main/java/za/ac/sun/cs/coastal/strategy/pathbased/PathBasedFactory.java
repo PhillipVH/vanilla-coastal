@@ -186,7 +186,7 @@ public abstract class PathBasedFactory implements StrategyFactory {
             Trigger trigger = coastal.getTrigger(0);
             String name = trigger.getParamName(0);
             for (int i = 0; i < inputString.size(); i++) {
-                resultInput.put(name + SymbolicState.CHAR_SEPARATOR + i, new Integer(inputString.get(i)));
+                resultInput.put(name + SymbolicState.INDEX_SEPARATOR + i, new Long(inputString.get(i)));
             }
             return resultInput;
         }
@@ -207,6 +207,7 @@ public abstract class PathBasedFactory implements StrategyFactory {
                     // Check Redis for work
 
                     List<Integer> values = new LinkedList<>();
+                    values.add(12);
                     values.add(12);
 
                     List<Input> inputs = Collections.singletonList(
